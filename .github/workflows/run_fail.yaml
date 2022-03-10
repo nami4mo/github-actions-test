@@ -25,12 +25,5 @@ jobs:
           toolchain: stable
           override: true
       - name: test
-        run: cargo test --all my_test
+        run: cargo test --all fail_test
         working-directory: rs_sample
-
-      ### cannot set directory...?
-      # - uses: actions-rs/cargo@v1
-      #   working-directory: rs_sample
-      #   with:
-      #     command: test
-      #     args: --release --all-features
